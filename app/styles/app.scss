@@ -1,8 +1,32 @@
-@import "ember-cli-bootstrap-4/bootstrap";
+@import 'bootstrap';
 
+// variables
+$light-gray: #ddd;
+
+// styles
 h1 {
   margin: .5em 0;
 }
 nav {
   margin: 1em 0;
+}
+
+.card {
+  text-align: center;
+  .card-image-container {
+    border-radius: 50%;
+    display: inline-block;
+    height: 250px;
+    margin-top: 2em;
+    width: 250px;
+    overflow: hidden;
+    border: 10px solid $light-gray;
+    img {
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+  .list-group {
+    text-align: left;
+  }
 }
