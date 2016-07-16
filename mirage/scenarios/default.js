@@ -1,10 +1,12 @@
 export default function(server) {
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
+  const people = server.createList('person', 10);
 
-    Make sure to define a factory for each model you want to create.
-  */
-  server.createList('person', 10);
+  people.forEach((person) => {
+    if(person.role === 'teacher'){
+      server.createList('experience', 3, { person });
+    } else {
+      server.createList('course', 5, { person });
+    }
+  });
 }
