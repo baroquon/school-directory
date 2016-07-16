@@ -3,7 +3,7 @@ import { Factory, faker } from 'ember-cli-mirage';
 function aUniversity(){
   let UniversityOf = 'University of ' + faker.address.state();
   let College = `${faker.address.state()} ${faker.list.random('College', 'A & M', 'State University')}`;
-  return faker.list.random(UniversityOf, College);
+  return faker.list.random(UniversityOf, College)();
 }
 
 export default Factory.extend({
