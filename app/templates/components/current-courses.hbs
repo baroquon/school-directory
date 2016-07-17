@@ -1,0 +1,7 @@
+{{#each contact.currentCourses as |course|}}
+  <li class='list-group-item'>
+    <h4>{{course.title}}</h4>
+    <p>Hours: {{course.creditHours}}</p>
+    <p>{{course.description}}</p>
+  </li>
+{{/each}}
