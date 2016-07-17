@@ -1,0 +1,5 @@
+<div class="list-group">
+  {{#each contacts as |contact|}}
+    {{#link-to 'contacts.contact' contact class="list-group-item"}}{{contact.fullName}}{{/link-to}}
+  {{/each}}
+</div>

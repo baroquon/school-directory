@@ -1,9 +1,5 @@
 <div class='col-md-3'>
-  <div class="list-group">
-    {{#each model as |contact|}}
-      {{#link-to 'contacts.contact' contact class="list-group-item"}}{{contact.fullName}}{{/link-to}}
-    {{/each}}
-  </div>
+  {{contacts-list contacts=model}}
 </div>
 <div class='col-md-9'>
   {{outlet}}
