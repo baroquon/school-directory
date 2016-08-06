@@ -1,6 +1,6 @@
 export default function(server) {
 
-  const people = server.createList('person', 10);
+  const people = server.createList('person', 40);
 
   people.forEach((person) => {
     if(person.role === 'teacher'){
