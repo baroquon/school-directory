@@ -29,6 +29,13 @@ nav {
   .list-group {
     text-align: left;
   }
+  .pull-right{
+    float: right;
+  }
+  &.edit-card{
+    padding: 1em;
+    text-align: left;
+  }
 }
 .pagination-links{
   margin-top: 1em;

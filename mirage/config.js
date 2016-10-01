@@ -26,6 +26,9 @@ export default function() {
   this.get('/people/:id', (schema, request) => {
     return schema.people.find(request.params.id);
   });
+  this.patch('/people/:id', (schema, request) => {
+    return request.requestBody;
+  });
   this.get('/experiences', (schema) => {
     return schema.experiences.all();
   });
