@@ -12,6 +12,6 @@ export default {
   email: validatePresence(true),
   phone: [
     validatePresence(true),
-    validateLength({ min: 10, max: 14 })
+    validateLength({ min: 10, max: 20 })
   ]
 };

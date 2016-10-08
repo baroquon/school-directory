@@ -1,9 +1,11 @@
 {{link-to 'back to contact' 'contacts.contact' class='pull-right'}}
-{{#if errorArray}}
+{{#if changeset.isInvalid}}
   <div class="alert alert-danger">
     <ul>
-      {{#each errorArray as |error| }}
-        <li>{{error}}</li>
+      {{#each changeset.errors as |error|}}
+        {{#each error.validation as |err|}}
+          <li>{{err}}</li>
+        {{/each}}
       {{/each}}
     </ul>
   </div>
@@ -25,6 +27,6 @@
     <label>Title: </label>{{input class="form-control" value=changeset.title}}
   </div>
 
-  <button class="btn btn-primary" {{action submit changeset}}>Submit</button>
+  <button class="btn btn-primary" {{action submit changeset}} disabled={{changeset.isInvalid}}>Submit</button>
   <button class="btn btn-primary" {{action rollback changeset}}>Rollback</button>
 </form>
