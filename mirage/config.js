@@ -29,6 +29,9 @@ export default function() {
   this.patch('/people/:id', (schema, request) => {
     return request.requestBody;
   });
+  this.post('/people/:id');
+  this.del('/people/:id');
+  
   this.get('/experiences', (schema) => {
     return schema.experiences.all();
   });
