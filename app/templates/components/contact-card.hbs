@@ -1,3 +1,4 @@
+{{link-to 'Edit' 'contacts.contact.edit' class='pull-right'}}
 <div class="card-image-container">
   <img src="{{contact.avatar}}" class="card-img-top" alt="Card image cap">
 </div>
@@ -7,4 +8,3 @@
   <p class="card-text"> <strong>phone:</strong> {{contact.phone}}</p>
   <p class="card-text"><strong>email:</strong> <a href="mailTo={{contact.email}}" class="card-link">{{contact.email}}</a> </p>
 </div>
-{{component additionalInformationComponent contact=contact}}
