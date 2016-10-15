@@ -23,13 +23,14 @@ export default function() {
 
     return json;
   });
+  
+  this.post('/people');
   this.get('/people/:id', (schema, request) => {
     return schema.people.find(request.params.id);
   });
   this.patch('/people/:id', (schema, request) => {
     return request.requestBody;
   });
-  this.post('/people/:id');
   this.del('/people/:id');
   
   this.get('/experiences', (schema) => {
