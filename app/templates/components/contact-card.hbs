@@ -6,5 +6,5 @@
   <p class="card-text">{{contact.role}}</p>
   <p class="card-text"> <strong>phone:</strong> {{contact.phone}}</p>
   <p class="card-text"><strong>email:</strong> <a href="mailTo={{contact.email}}" class="card-link">{{contact.email}}</a> </p>
+  <p class='card-text'>{{link-to 'Edit' 'contacts.contact.edit'}}</p>
 </div>
-{{component additionalInformationComponent contact=contact}}
