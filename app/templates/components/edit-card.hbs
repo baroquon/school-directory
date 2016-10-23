@@ -1,4 +1,15 @@
 {{link-to 'back to contact' 'contacts.contact' class='pull-right'}}
+{{#if changeset.isInvalid}}
+  <div class="alert alert-danger">
+    <ul>
+      {{#each changeset.errors as |error|}}
+        {{#each error.validation as |err|}}
+          <li>{{err}}</li>
+        {{/each}}
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
 <form>
   <div class="form-group">
     <label>First Name: </label>{{input class="form-control" value=changeset.firstName}}
@@ -19,7 +30,6 @@
     <label>Avatar: </label>{{input class="form-control" value=changeset.avatar}}
   </div>
 
-
-  <button class="btn btn-primary" {{action submit changeset}}>Submit</button>
+  <button class="btn btn-primary" {{action submit changeset}} disabled={{changeset.isInvalid}}>Submit</button>
   <button class="btn btn-primary" {{action rollback changeset}}>Rollback</button>
 </form>
