@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('contact', { path: ':person_id'}, function() {
       this.route('edit');
     });
+    this.route('new');
   });
 });
 
